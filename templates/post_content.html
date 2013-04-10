@@ -1,0 +1,25 @@
+    <section id="post_content">
+        <div class="row-fluid">
+            <div class="span9">
+                <header>
+                    <h3 class="post_title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+                </header>
+                {{ article.content }}
+            </div>
+            <div class="span2 offset1">
+                <aside>
+                    <p>Under <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
+                    {% if article.tags %}
+                    <p>Tags {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> {% endfor %}</p>
+                    {% endif %}
+                    {% if SITEURL %}
+                    {%- set share_url = [SITEURL, article.url]|join('/') -%}
+                    {%- set share_title = article.title -%}
+                    <p>{% include 'twitter_link.html' %}</p>
+                    <p>{% include 'google_plusone.html' %}</p>
+                    {% endif %}
+                    <a class="btn btn-mini xsmall" href="{{ SITEURL }}/{{ article.url }}"><i class="icon-comment"></i> Comment </a>
+                </aside>
+            </div>
+        </div>
+    </section>

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<article>
+    <section id="post_title">
+        <h1 class="post_title"><time>{{ article.locale_date }}</time></h1>
+    </section>
+    {% include 'post_content.html' %}
+
+    {% include 'disqus.html' %}
+</article>
+
+{% endblock %}

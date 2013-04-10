@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<article>
+    <section id="post_title">
+        <h1 class="post_title"><a href="#">{{ page.title }}</a></h1>
+    </section>
+
+    <section id="post_content">
+        <div class="row-fluid">
+            <div class="span9">
+                {{ page.content }}
+            </div>
+            <div class="span2 offset1">&nbsp;</div>
+        </div>
+    </section>
+
+</article>
+
+{% endblock %}
