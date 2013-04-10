@@ -1,11 +1,12 @@
 # WhispersTheme
 
-A theme for [Pelican](https://github.com/getpelican/pelican).
+A theme for [Pelican](https://github.com/getpelican/pelican) inspired by Svbtle.
 
 ## Features
 
 *  Built with [HTML5 Boilerplate](http://html5boilerplate.com/) and [Bootstrap](http://twitter.github.io/bootstrap/)
 *  Icons by [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+*  Source Sans Pro and Istok Web by [Google Fonts](http://www.google.com/fonts/)
 *  Back to top script by [Rolka](https://github.com/rolka/back-to-top)
 *  Pelican hacks by [noirbizzare](http://noirbizarre.info/2013/03/24/huit-recettes-pour-pelican/)
 *  Responsive
