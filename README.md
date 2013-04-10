@@ -1,6 +1,8 @@
 # WhispersTheme
 
-A theme for [Pelican](https://github.com/getpelican/pelican) inspired by Svbtle.
+A theme for [Pelican](https://github.com/getpelican/pelican) somewhat inspired by Svbtle.
+
+Need some fine tuning I guess...
 
 ## Features
 
@@ -11,7 +13,7 @@ A theme for [Pelican](https://github.com/getpelican/pelican) inspired by Svbtle.
 *  Pelican hacks by [noirbizzare](http://noirbizarre.info/2013/03/24/huit-recettes-pour-pelican/)
 *  Responsive
 *  Pelican features: socials, links, disqus
-*  Article sharing: Tweeter, G+ One
+*  Article sharing: Tweeter, Google Plus One
 
 ## Using
 
