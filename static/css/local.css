@@ -72,19 +72,98 @@ h1 a, h3 a {
     color: #000001;
 }
 
+.post_tags {
+    margin:0;
+    padding:0;
+    right:24px;
+    bottom:-12px;
+    list-style:none;
+}
+
+.post_tags li, .post_tags a {
+    float:left;
+    height:24px;
+    line-height:24px;
+    position:relative;
+    font-size:11px;
+}
+
+.post_tags a {
+    margin-left:20px;
+    padding:0 10px 0 12px;
+    background:#B0B0B0;
+    color:#fff;
+    text-decoration:none;
+    -moz-border-radius-bottomright:4px;
+    -webkit-border-bottom-right-radius:4px; 
+    border-bottom-right-radius:4px;
+    -moz-border-radius-topright:4px;
+    -webkit-border-top-right-radius:4px;    
+    border-top-right-radius:4px;    
+}
+
+.post_tags a:before{
+    content:"";
+    float:left;
+    position:absolute;
+    top:0;
+    left:-12px;
+    width:0;
+    height:0;
+    border-color:transparent #B0B0B0 transparent transparent;
+    border-style:solid;
+    border-width:12px 12px 12px 0;      
+}
+
+.post_tags a:after{
+    content:"";
+    position:absolute;
+    top:10px;
+    left:0;
+    float:left;
+    width:4px;
+    height:4px;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    background:#fff;
+    -moz-box-shadow:-1px -1px 2px #004977;
+    -webkit-box-shadow:-1px -1px 2px #004977;
+    box-shadow:-1px -1px 2px #004977;
+}
+
+.post_tags a:hover {
+    background: #000;
+}
+
+.post_tags a:hover:before {
+    border-color: transparent #000 transparent transparent;
+}
+
 #post_share {
     font-size: 14px;
     text-align: left;
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-    border-radius:10px;
-    border: 1px solid #cfcfcf;
-    padding: 5px;
+    vertical-align: middle;
+    padding-left: 40pt;
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
 #post_comment {
     padding-left: 40pt;
     padding-top: 10pt;    
+}
+
+.comment_button {
+    padding-top: 20px;
+    font-size: 42px;
+    color: #B0B0B0;
+    text-align:center;
+}
+
+.comment_button:hover {
+    color: black;
+    text-decoration: none;
 }
 
 .go-top {
@@ -102,3 +181,4 @@ h1 a, h3 a {
     color: black;
     text-decoration: none;
 }
+

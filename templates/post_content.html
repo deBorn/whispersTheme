@@ -6,20 +6,34 @@
                 </header>
                 {{ article.content }}
             </div>
-            <div class="span2 offset1">
-                <aside id="post_share">
-                    <p>Under <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
-                    {% if article.tags %}
-                    <p>Tags {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> {% endfor %}</p>
-                    {% endif %}
-                    {% if SITEURL %}
-                    {%- set share_url = [SITEURL, article.url]|join('/') -%}
-                    {%- set share_title = article.title -%}
-                    <p>{% include 'twitter_link.html' %}</p>
-                    <p>{% include 'google_plusone.html' %}</p>
-                    {% endif %}
-                    <p><a class="btn btn-mini xsmall" href="{{ SITEURL }}/{{ article.url }}"><i class="icon-comment"></i> Comment </a></p>
-                </aside>
-            </div>
+            <!--<div class="span2 offset1">
+                <a class="comment_button" href="{{ SITEURL }}/{{ article.url }}"><i class="icon-comment"></i>&nbsp;</a>
+            </div> -->
         </div>
+    </section>
+    <section id="post_infos">
+        <aside id="post_share">
+            <div class="row-fluid">
+                <div class="span2">
+                    Filed under <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+                </div>
+                <div class="span5">
+                    {% if article.tags %}
+                    <ul class="post_tags">
+                        {% for tag in article.tags %}<li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>{% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+                {% if SITEURL %}
+                {%- set share_url = [SITEURL, article.url]|join('/') -%}
+                {%- set share_title = article.title -%}
+                <div class="span1">
+                    {% include 'twitter_link.html' %}
+                </div>
+                <div class="span1">
+                    {% include 'google_plusone.html' %}
+                </div>
+                {% endif %}
+            </div>
+        </aside>
     </section>
