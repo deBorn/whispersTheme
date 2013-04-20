@@ -1,6 +1,6 @@
 # WhispersTheme
 
-A theme for [Pelican](https://github.com/getpelican/pelican) somewhat inspired by Svbtle.
+A clean minimalist theme for [Pelican](https://github.com/getpelican/pelican) vaguely inspired by Svbtle.
 
 Need some fine tuning I guess...
 
