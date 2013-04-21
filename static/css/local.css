@@ -18,6 +18,10 @@ html, body {
     color:#000001;
 }
 
+.brand:hover {
+    color:#000001;
+}
+
 #blog-nav a {
      color: #1f334b;
      font-size: 14px;
@@ -69,6 +73,10 @@ h3.post_title {
 }
 
 h1 a, h3 a {
+    color: #000001;
+}
+
+h1 a:hover, h3 a:hover {
     color: #000001;
 }
 
@@ -182,3 +190,16 @@ h1 a, h3 a {
     text-decoration: none;
 }
 
+.languages {
+    padding-top: 20px;
+}
+
+.translation {
+    font-size: 14px;
+    color: #B0B0B0;
+}
+
+.translation:hover {
+    color: black;
+    text-decoration: none;
+}

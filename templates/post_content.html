@@ -6,9 +6,13 @@
                 </header>
                 {{ article.content }}
             </div>
-            <!--<div class="span2 offset1">
-                <a class="comment_button" href="{{ SITEURL }}/{{ article.url }}"><i class="icon-comment"></i>&nbsp;</a>
-            </div> -->
+            {% if article.translations %}
+            <div class="span1 offset2 languages">
+                {% for translation in article.translations %}
+                <a class="translation" href="{{ SITEURL }}/{{ translation.url }}"><i class="icon-edit"></i>{{ translation.lang }}</a>
+                {% endfor %}
+            </div>
+            {% endif %}
         </div>
     </section>
     <section id="post_infos">

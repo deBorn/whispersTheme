@@ -12,7 +12,15 @@
             <div class="span9">
                 {{ page.content }}
             </div>
-            <div class="span2 offset1">&nbsp;</div>
+            {% if page.translations %}
+            <div class="span1 offset2 languages">
+                {% for translation in page.translations %}
+                <a class="translation" href="{{ SITEURL }}/{{ translation.url }}"><i class="icon-edit"></i>{{ translation.lang }}</a>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="span1 offset2">&nbsp;</div>
+            {% endif %}
         </div>
     </section>
 
