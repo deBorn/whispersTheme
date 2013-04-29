@@ -21,7 +21,7 @@
                 <div class="span2">
                     Filed under <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
                 </div>
-                <div class="span5">
+                <div class="span4">
                     {% if article.tags %}
                     <ul class="post_tags">
                         {% for tag in article.tags %}<li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>{% endfor %}
@@ -31,7 +31,7 @@
                 {% if SITEURL %}
                 {%- set share_url = [SITEURL, article.url]|join('/') -%}
                 {%- set share_title = article.title -%}
-                <div class="span1">
+                <div class="span2">
                     {% include 'twitter_link.html' %}
                 </div>
                 <div class="span1">
