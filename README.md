@@ -13,6 +13,7 @@ Need some fine tuning I guess...
 *  Pelican hacks by [noirbizzare](http://noirbizarre.info/2013/03/24/huit-recettes-pour-pelican/)
 *  Responsive
 *  Pelican features: socials, links, disqus
+*  Posts pager: needs an extension `JINJA_EXTENSIONS = ['jinja2.ext.do']`
 *  Article sharing: Tweeter, Google Plus One
 
 ## Using
