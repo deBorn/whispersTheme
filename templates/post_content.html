@@ -1,8 +1,9 @@
-    <section id="post_content">
+<div id="post_content">
+    <section>
         <div class="row-fluid">
-            <div class="span9">
+            <div class="span9" id="post_article">
                 <header>
-                    <h3 class="post_title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+                    <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
                 </header>
                 {{ article.content }}
             </div>
@@ -15,13 +16,10 @@
             {% endif %}
         </div>
     </section>
-    <section id="post_infos">
+    <section>
         <aside id="post_share">
             <div class="row-fluid">
-                <div class="span2">
-                    Filed under <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
-                </div>
-                <div class="span4">
+                <div class="span6">
                     {% if article.tags %}
                     <ul class="post_tags">
                         {% for tag in article.tags %}<li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>{% endfor %}
@@ -41,3 +39,4 @@
             </div>
         </aside>
     </section>
+</div>

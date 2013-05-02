@@ -18,7 +18,7 @@
 
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css">
 
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/local.css">
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
 
         <script src="{{ SITEURL }}/theme/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
@@ -30,59 +30,57 @@
         <!-- Add your site or application content here -->
         <div class="container">
             <div class="row-fluid">
-                <div class="span2" id="blog-side">
-                    <header id="blog-title">
-                        <a class="brand" href="{{ SITEURL }}">{{ SITENAME }}</a>
-                    </header>
-                    <nav id="blog-nav">
-                        {% if DISPLAY_PAGES_ON_MENU %}
-                        <ul class="nav nav-list" align="center">
-                            {% for page in PAGES %}
-                            <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %}
-                        {% if SOCIAL %}
-                        <ul class="nav nav-list" align="center">
-                            <li class="nav-header">Social</li>
-                            {% for name, link in SOCIAL %}
-                            <li><a href="{{ link }}"><i class="icon-{{ name }}" style="color: #1f334b"></i>{{ name }}</a></li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %}
-                        {% if LINKS %}
-                        <ul class="nav nav-list" align="center">
-                            <li class="nav-header">Links</li>
-                            {% for name, link in LINKS %}
-                            <li><a href="{{ link }}"><i class="icon-share"></i>{{ name }}</a></li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %}
-                        <ul class="nav nav-list" align="center">
-                            <li class="nav-header">Site</li>
-                            <li><a href="{{ SITEURL }}"><i class="icon-home"></i>Home</a></li>
-                            <li><a href="{{ SITEURL }}/archives.html"><i class="icon-list"></i>Archives</a></li>
-                            <li><a href="{{ SITEURL }}/categories.html"><i class="icon-sitemap"></i>Categories</a></li>
-                            <li><a href="{{ SITEURL }}/tags.html"><i class="icon-tags"></i>Tags</a></li>
-                        </ul>
-                        <ul class="nav nav-list" align="center">
-                            <li class="nav-header">Feeds</li>
-                            {% if FEED_ALL_RSS %}
-                            <li><a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" rel="alternate"><i class="icon-rss"></i>RSS Feed</a></li>
+                <div class="span2">
+                    <aside>
+                        <header id="blog-title">
+                            <a class="brand" href="{{ SITEURL }}">{{ SITENAME }}</a>
+                        </header>
+                        <nav id="blog-nav">
+                            {% if DISPLAY_PAGES_ON_MENU %}
+                            <ul class="nav nav-list" align="center">
+                                {% for page in PAGES %}
+                                <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                                {% endfor %}
+                            </ul>
                             {% endif %}
-                            <li><a href="{{ SITEURL }}/{{  FEED_ALL_ATOM }}" rel="alternate"><i class="icon-rss" ></i>Atom Feed</a></li>
-                        </ul>
-                    </nav>
+                            {% if SOCIAL %}
+                            <ul class="nav nav-list" align="center">
+                                <li class="nav-header">Social</li>
+                                {% for name, link in SOCIAL %}
+                                <li><a href="{{ link }}"><i class="icon-{{ name }}" style="color: #1f334b"></i>{{ name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                            {% if LINKS %}
+                            <ul class="nav nav-list" align="center">
+                                <li class="nav-header">Links</li>
+                                {% for name, link in LINKS %}
+                                <li><a href="{{ link }}"><i class="icon-share"></i>{{ name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                            <ul class="nav nav-list" align="center">
+                                <li class="nav-header">Site</li>
+                                <li><a href="{{ SITEURL }}"><i class="icon-home"></i>Home</a></li>
+                                <li><a href="{{ SITEURL }}/archives.html"><i class="icon-list"></i>Archives</a></li>
+                                <li><a href="{{ SITEURL }}/categories.html"><i class="icon-sitemap"></i>Categories</a></li>
+                                <li><a href="{{ SITEURL }}/tags.html"><i class="icon-tags"></i>Tags</a></li>
+                            </ul>
+                            <ul class="nav nav-list" align="center">
+                                <li class="nav-header">Feeds</li>
+                                {% if FEED_ALL_RSS %}
+                                <li><a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" rel="alternate"><i class="icon-rss"></i>RSS Feed</a></li>
+                                {% endif %}
+                                <li><a href="{{ SITEURL }}/{{  FEED_ALL_ATOM }}" rel="alternate"><i class="icon-rss" ></i>Atom Feed</a></li>
+                            </ul>
+                        </nav>
+                    </aside>
                 </div>
-                <div class="span10" id="blog-content">
-                    <section>
+                <div class="span10">
+                    <section id="blog-content">
                         {% block content %}{% endblock %}
+                        <a href="#" class="go-top"><i class="icon-circle-arrow-up"></i></a>
                     </section>
-                    <div class="row">
-                        <div class="span3">
-                            <a href="#" class="go-top"><i class="icon-circle-arrow-up"></i></a>
-                        </div>
-                    </div>
                 </div>
             </div>
             <footer id="blog-author">

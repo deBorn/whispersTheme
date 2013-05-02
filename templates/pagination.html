@@ -1,4 +1,5 @@
-<div class="pagination pull-right">
+<div class="pagination">
+<section>
 <ul>
 {% if articles_page.has_previous() %}
 {% set num = articles_page.previous_page_number() %}
@@ -17,4 +18,5 @@
     <li class="next disabled"><a href="#">&rarr; Next</a></li>
 {% endif %}
 </ul>
+</section>
 </div>
